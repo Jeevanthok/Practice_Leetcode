@@ -3,7 +3,7 @@ package com.String.Practice;
 public class ReverseAsentence {
     public static void main(String[] args) {
         String str = "Jeevan Rajendra Thok";
-        reverseWordOfSentencce(str);
+      //  reverseWordOfSentencce(str);
         reverseSentence(str);
     }
 
@@ -22,9 +22,14 @@ public class ReverseAsentence {
     }
 
     private static void reverseSentence(String str) {
+        String reversstring ="";
         String[] splitstr = str.split(" ");
         for (int i=splitstr.length-1;i>=0;i--){
-            System.out.print(" " + splitstr[i]);
+            reversstring += splitstr[i];
+            if(i!=0){
+                reversstring +=" ";
+            }
         }
+        System.out.println(reversstring);
     }
 }
