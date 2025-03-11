@@ -1,4 +1,4 @@
-package com.streamApi.practice;
+package com.Stream.API;
 
 public class Employe {
     int id;

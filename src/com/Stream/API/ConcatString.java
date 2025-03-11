@@ -1,4 +1,4 @@
-package com.streamApi.practice;
+package com.Stream.API;
 
 
 import java.util.ArrayList;
@@ -12,6 +12,7 @@ public class ConcatString {
         lst.add("Jeevan");
         lst.add("Rajendra");
         lst.add("Thok");
+       // lst.stream().collect(Collectors.joining())
         String str = lst.stream().collect(Collectors.joining(","));
         System.out.println(str);
     }

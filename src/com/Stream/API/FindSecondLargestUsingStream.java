@@ -1,4 +1,4 @@
-package com.streamApi.practice;
+package com.Stream.API;
 
 import java.util.Comparator;
 import java.util.List;

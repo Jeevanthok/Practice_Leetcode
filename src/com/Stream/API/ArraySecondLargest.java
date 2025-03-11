@@ -1,8 +1,10 @@
-package com.streamApi.practice;
+package com.Stream.API;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class ArraySecondLargest {
     public static void main(String[] args) {
@@ -15,5 +17,11 @@ public class ArraySecondLargest {
 
         // Print the sorted array
         System.out.println(sortedArr);
+
+        Optional<Integer> second = Arrays.stream(arr)
+                .sorted(Collections.reverseOrder())
+                .skip(1)
+                .findFirst();
+        System.out.println(second);
     }
 }

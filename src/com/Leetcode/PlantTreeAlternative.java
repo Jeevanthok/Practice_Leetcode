@@ -3,7 +3,7 @@ package com.Leetcode;
 public class PlantTreeAlternative {
     public static void main(String[] args) {
         int arr[] ={1,0,0,0,0,0,0,0,1};
-        int n=3;
+        int n=5;
 
         System.out.println((planttree(arr,n)));
     }

@@ -3,16 +3,27 @@ package com.array.practice;
 public class BuySell {
     public static void main(String[] args) {
         int[] arr = {7,1,5,3,6,4};
-        System.out.println(maxProfit(arr));
-
-        // using recursion
+      //  System.out.println(maxProfit(arr));
         int i=0;
         int max=0;
-        maxProfitUsingRecursion(i,max,arr);
+
+        System.out.println(maxProfitusinfoneLoop(arr));
     }
 
-    private static void maxProfitUsingRecursion(int i, int max, int[] arr) {
-        
+    private static int maxProfitusinfoneLoop(int[] arr) {
+        if (arr.length == 0 || arr == null) return 0;
+
+        int minprice=arr[0];
+        int maxProfit = 0;
+        for (int i=1;i<arr.length;i++){
+            if (minprice > arr[i]){
+                minprice = arr[i];
+            }else {
+                int max = arr[i] - minprice;
+                maxProfit = Math.max(max,maxProfit);
+            }
+        }
+        return maxProfit;
     }
 
 

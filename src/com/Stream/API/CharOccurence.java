@@ -1,4 +1,4 @@
-package com.streamApi.practice;
+package com.Stream.API;
 
 //write a program to count the number of occurrence of each character in string using stream
 
@@ -13,5 +13,7 @@ public class CharOccurence {
         Map<String, Long> output = Arrays.stream(str.split(""))
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         System.out.println("Output : "+output);
+
+
     }
 }

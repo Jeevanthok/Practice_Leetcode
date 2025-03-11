@@ -1,7 +1,6 @@
 package com.SortingAlgo;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.stream.IntStream;
 
 public class SelectionSort {
@@ -12,7 +11,6 @@ public class SelectionSort {
     }
 
     private static void selectionSort(int[] arr, int length) {
-
         for (int i=0;i<length;i++){
             int min_idx = i;
             for (int j = i+1;j<length;j++){

@@ -1,9 +1,8 @@
-package com.streamApi.practice;
+package com.Stream.API;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class OddEvenNUmber {
     public static void main(String[] args) {

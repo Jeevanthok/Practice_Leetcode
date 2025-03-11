@@ -1,8 +1,6 @@
-package com.streamApi.practice;
+package com.Stream.API;
 
-import javax.naming.Name;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class OldestPersonName {
     static class Person {
