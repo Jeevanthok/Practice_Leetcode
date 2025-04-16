@@ -11,8 +11,12 @@ public class SubArrayMaxSumK {
             sum += arr[i];
         }
         max = sum;
+        int i=0;
         for (int j=k;j<arr.length;j++){
-            sum += arr[j] - arr[j-k];
+            //sum += arr[j] - arr[j-k];
+            sum += arr[j];
+            sum -=arr[i];
+            i++;
             max = Math.max(sum,max);
         }
         System.out.println(max);

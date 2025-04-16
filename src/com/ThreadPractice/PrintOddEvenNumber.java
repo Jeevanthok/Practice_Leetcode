@@ -17,7 +17,7 @@ public class PrintOddEvenNumber {
                             Thread.currentThread().interrupt();
                         }
                     }
-                    System.out.print(i + " ");
+                    System.out.print("Thread1 " + i + " ");
                     isOddTurn = false;
                     lock.notify();
                 }
@@ -34,7 +34,7 @@ public class PrintOddEvenNumber {
                             Thread.currentThread().interrupt();
                         }
                     }
-                    System.out.print(i + " ");
+                    System.out.print("Thread2 "+i + " ");
                     isOddTurn = true;
                     lock.notify();
                 }

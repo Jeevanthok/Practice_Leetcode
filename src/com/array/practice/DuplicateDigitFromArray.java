@@ -38,5 +38,10 @@ public class DuplicateDigitFromArray {
                 alreadyavalailbe.add(arr2[i]);
             }
         }
+
+        System.out.println("seen" + alreadyavalailbe.toString());
+
+
+        System.out.println("duplicate" +duplicate.toString());
     }
 }

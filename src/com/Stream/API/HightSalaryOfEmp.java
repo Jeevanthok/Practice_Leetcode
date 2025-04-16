@@ -1,9 +1,6 @@
 package com.Stream.API;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class HightSalaryOfEmp {
     public static void main(String[] args) {
@@ -17,16 +14,31 @@ public class HightSalaryOfEmp {
         emplist.add(emp);
         emplist.add(emp1);
         emplist.add(emp2);
+        emplist.add(emp2);
         emplist.add(emp3);
         emplist.add(emp4);
 
+//       Optional<Employe> sec =  emplist.stream().max((e1, e2)-> Double.compare(e1.getSalary(),e2.getSalary()));
+//        System.out.println("seeeeeeeec"   + sec);
+
         Optional<Employe> maxsalary = emplist.stream().max(Comparator.comparingDouble(Employe::getSalary));
-
-        Optional<Employe> secondmaxsalary = emplist.stream().sorted(Comparator.comparingDouble(Employe::getSalary).reversed())
+        System.out.println("Max salary" + maxsalary.get());
+        Optional<Employe> secondmaxsalary = emplist.stream().
+                        sorted(Comparator.comparingDouble(Employe::getSalary).reversed())
                         .skip(1).findFirst();
-        System.out.println(secondmaxsalary);
+        System.out.println("second highest" + secondmaxsalary.get());
         maxsalary.ifPresent(System.out::println);
-        System.out.println(maxsalary.toString());
 
+     OptionalDouble secondHighSalary = emplist.stream()
+             .mapToDouble(Employe::getSalary)
+             .skip(emplist.size() - 1)
+             .findFirst();
+        System.out.println("new " +secondHighSalary);
+        double secondSalary = secondHighSalary.getAsDouble();
+
+        System.out.println("       -----    ");
+        emplist.stream()
+                .filter(e -> e.getSalary() == secondSalary)
+                .forEach(System.out::println);
     }
 }

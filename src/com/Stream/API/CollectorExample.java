@@ -1,11 +1,18 @@
 package com.Stream.API;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class CollectorExample {
     public static void main(String[] args) {
         List<String> words = Arrays.asList("apple", "banana", "cherry", "apple", "banana");
+
+        Map<String, Long> charCount =  words.stream()
+                .flatMap(word->Arrays.stream(word.split("")))
+                .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+
+        System.out.println(charCount);
 
         // Collect unique words into a Set
         Set<String> uniqueWords = words.stream()
